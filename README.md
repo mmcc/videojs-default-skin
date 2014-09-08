@@ -1,6 +1,10 @@
-# SCSS usage guideline.
+# Video.js default theme
+
+## SCSS syntax usage guideline.
 
 ### Nesting should *only* be used for pseudo elements.
+
+Nesting can be convenient, but avoid it for anything other than pseudo elements.
 
 ```scss
 // Good
