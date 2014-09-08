@@ -1,5 +1,19 @@
 # Video.js default theme
 
+## Building the theme
+
+```
+$ git clone https://github.com/mmcc/videojs-default-skin.git && cd videojs-default-skin
+```
+
+The repo already has a pre-built css file in the `dist` folder. If you'd like to make edits,
+simply make the edits you'd like and:
+
+```
+$ npm install
+$ grunt
+```
+
 ## SCSS syntax usage guideline.
 
 ### Nesting should *only* be used for pseudo elements.
