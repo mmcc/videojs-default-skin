@@ -1,0 +1,106 @@
+// MIXINS
+// =============================================================================
+// Mixins are a SCSS feature and are used to add vendor prefixes to CSS rules
+// when needed.
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+@mixin box-shadow($string: $box-shadow--default) {
+  -webkit-box-shadow: $string;
+     -moz-box-shadow: $string;
+          box-shadow: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+@mixin border-radius($string: $border-radius--default) {
+  -webkit-border-radius: $string;
+     -moz-border-radius: $string;
+          border-radius: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+@mixin transition($string: $transition--default) {
+  -webkit-transition: $string;
+     -moz-transition: $string;
+       -o-transition: $string;
+          transition: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+@mixin transition-delay($string: $transition-delay--default) {
+  -webkit-transition-delay: $string;
+     -moz-transition-delay: $string;
+       -o-transition-delay: $string;
+          transition-delay: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+@mixin animation($string: $animation--default) {
+  -webkit-animation: $string;
+     -moz-animation: $string;
+       -o-animation: $string;
+          animation: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+@mixin transform($string: $transform--default) {
+  -webkit-transform: $string;
+     -moz-transform: $string;
+      -ms-transform: $string;
+       -o-transform: $string;
+          transform: $string;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+@mixin user-select($string: $user-select--default) {
+  -webkit-user-select: $string;
+     -moz-user-select: $string;
+      -ms-user-select: $string;
+          user-select: $string;
+}
+
+// Hide something visually but keep available for screen readers.
+// http://h5bp.com/v
+@mixin hide-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Align an object with absolute positioning
+// Used to align the Big Play Button in the corners or center
+@mixin absolute-align($align, $margin, $length) {
+  @if $align == 'top' { top: $margin; }
+  @if $align == 'bottom' { bottom: $margin; }
+  @if $align == 'left' { left: $margin; }
+  @if $align == 'right' { right: $margin; }
+  @if $align == 'center' {
+    // Center it horizontally
+    left: 50%;
+    margin-left: (-($length/2));
+  }
+  @if $align == 'middle' {
+    top: 50%;
+    margin-top: (-($length/2));
+  }
+}
+
+// http://stackoverflow.com/questions/637921/opacity-of-background-but-not-the-text
+@mixin background-color-with-alpha($color, $alpha) {
+  background-color: $color;
+  background-color: rgba($color, $alpha);
+}
+
+@mixin border-color-with-alpha($color, $alpha) {
+  border-color: $color;
+  border-color: rgba($color, $alpha);
+}
+
+@mixin icon($icon) {
+  content: $icon;
+  font-family: $font-family;
+}

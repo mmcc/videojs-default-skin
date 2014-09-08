@@ -1,0 +1,36 @@
+/* Custom Icon Font
+--------------------------------------------------------------------------------
+The control icons are from a custom font. Each icon corresponds to a character
+(e.g. "\e001"). Font icons allow for easy scaling and coloring of icons.
+*/
+@font-face{
+  font-family: $font-family;
+  src: url('#{$font-path}/vjs.eot');
+  src: url('#{$font-path}/vjs.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/vjs.woff') format('woff'),
+  url('#{$font-path}/vjs.ttf') format('truetype'),
+  url('#{$font-path}/vjs.svg#icomoon') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Icon font character values
+$play-icon: "\e001";
+$pause-icon: "\e002";
+$volume-muted-icon: "\e003";
+$volume-low-icon: "\e004";
+$volume-mid-icon: "\e005";
+$volume-high-icon: "\e006";
+$fullscreen-enter-icon: "\e000";
+$fullscreen-exit-icon: "\e00b";
+$square-icon: "\e009";
+$spinner-icon: "\e00a";
+$spinner2-icon: "\e00d";
+$spinner3-icon: "\e01e";
+$spinner4-icon: "\e01f";
+$subtitles-icon: "\e00c";
+$captions-icon: "\e008";
+$chapters-icon: "\e00c";
+$share-icon: "\e00e";
+$cog-icon: "\e600";

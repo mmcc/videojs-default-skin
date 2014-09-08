@@ -1,0 +1,8 @@
+// Bourbon provides utilities / mixins
+// @import 'bourbon';
+
+@import 'variables'; // Just making small changes? Look here first!
+@import 'font';
+@import 'utilities';
+@import 'core'; // Pulls in basic styles required for VJS to function. Probably don't edit.
+@import 'default'; // The actual theme.
